@@ -1,0 +1,8 @@
+{
+  "user": {
+    "name": "PERSON_A",
+    "email": "EMAIL_A",
+    "phone": "PHONE_HIDDEN",
+    "notes": "User PERSON_A registered yesterday."
+  }
+}

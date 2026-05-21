@@ -1,0 +1,4 @@
+id,name,email,phone
+1,PERSON_A,EMAIL_A,PHONE_HIDDEN
+2,Jan Kowalski,jan@example.com,987-654-321
+3,PERSON_A,EMAIL_A,PHONE_HIDDEN

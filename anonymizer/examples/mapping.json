@@ -1,0 +1,26 @@
+{
+    "replacements": [
+        {
+            "find": [
+                "Anna Nowak",
+                "A. Nowak"
+            ],
+            "replace": "PERSON_A"
+        },
+        {
+            "find": [
+                "anna@firma.test"
+            ],
+            "replace": "EMAIL_A"
+        },
+        {
+            "find": [
+                "123-456-789"
+            ],
+            "replace": "PHONE_HIDDEN"
+        }
+    ],
+    "options": {
+        "case_sensitive": false
+    }
+}

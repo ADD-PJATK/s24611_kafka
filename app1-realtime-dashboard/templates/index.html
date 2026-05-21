@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Stock Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>📈 Realtime Stock Dashboard</h1>
+        <p class="subtitle">Live price updates from Kafka API</p>
+
+        <div class="controls">
+            <label for="ticker-select">Select ticker:</label>
+            <select id="ticker-select">
+                <option value="">-- Choose a ticker --</option>
+                {% for ticker in tickers %}
+                <option value="{{ ticker }}">{{ ticker }}</option>
+                {% endfor %}
+            </select>
+            <button id="subscribe-btn" onclick="subscribeTicker()">Subscribe</button>
+        </div>
+
+        <div class="subscriptions">
+            <h3>Active Subscriptions</h3>
+            <div id="subscriptions-list" class="subscriptions-list"></div>
+        </div>
+
+        <div class="dashboard">
+            <div id="charts-container" class="charts-container">
+                <!-- Charts will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+
+</html>
