@@ -323,3 +323,22 @@ Educational project for PJATK — ADD (Additional Assignments)
 ---
 
 For more details, see [ACCEPTANCE.md](task2/ACCEPTANCE.md) or the individual README files.
+
+# Quick Start
+
+To run the mock stack offline:
+
+1. Install server dependencies:
+   ```bash
+   pip install -r mock/server/requirements.txt
+   ```
+2. Run the mock server:
+   ```bash
+   python mock/server/main.py
+   ```
+3. Run the integration pipeline tests (they will fail initially):
+   ```bash
+   pytest integration/tests/
+   ```
+
+For more details on the testing plan, see `documentation/plan-from-grading.md`
