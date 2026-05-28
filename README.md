@@ -342,3 +342,23 @@ To run the mock stack offline:
    ```
 
 For more details on the testing plan, see `documentation/plan-from-grading.md`
+
+# Kafka Local Data Integration
+
+This is the baseline repository connecting a local API to an anonymizing processor.
+
+## How to run the local system
+
+### Running manually
+1. **Mock Data Server**: `python mock/server/main.py`
+   - Binds on `http://127.0.0.1:8000`
+   - Exposes mock stock event streams and rest endpoints.
+2. **Launch Integration Pipeline**: `python integration/pipeline/run_pipeline.py`
+   - Connects to the server locally, downloads data to `out/un_anonymized.json`, and invokes local anonymization script to yield `out/anonymized.json`.
+
+### Testing Pipeline
+Run the e2e integration suite by simply executing:
+```sh
+python -m pytest integration/tests/
+```
+*(Optionally just `pytest` if your PATH permits)*
